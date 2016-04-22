@@ -6,7 +6,7 @@
 	<property file="deploy.properties" />
 	<import file="build.xml"/>
 	<target name="deploy" >
-		<exec executable="${CATALINA_HOME}/bin/shutdown.bat" />
+		<exec executable="${tomcat.dir}/bin/shutdown.bat" />
 		<copy file="${war.dir}/${app.name}.war" todir="${tomcat.dir}/webapps"/>		
 		<exec executable="${tomcat.dir}/bin/startup.bat" />
 	</target>
